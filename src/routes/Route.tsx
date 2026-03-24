@@ -1,10 +1,10 @@
 import type { RouteObject } from "react-router-dom";
-import Workspace from "../pages/Workspace";
+import Dashboard from "../pages/Dashboard";
 
 const Route: RouteObject[] = [
   {
     path: "/",
-    element: <Workspace />,
+    element: <Dashboard />,
   },
 ];
 
