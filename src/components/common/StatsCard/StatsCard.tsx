@@ -13,12 +13,26 @@ export const StatsCard = ({
   color,
   bgColorIcon,
 }: StatsCardProps) => {
+  const colorMap: { [key: string]: string } = {
+    blue: "border-l-blue-500",
+    orange: "border-l-orange-500",
+    green: "border-l-green-500",
+    red: "border-l-red-500",
+  };
+
+  const bgColorMap: { [key: string]: string } = {
+    blue: "bg-blue-200",
+    yellow: "bg-yellow-200",
+    green: "bg-green-200",
+    red: "bg-red-200",
+  };
+
   return (
     <div
-      className={`flex flex-col gap-2 p-4 mx-4 my-2 border-slate-200 border-l-8 border-l-${color}-500 shadow-md rounded-2xl bg-white`}
+      className={`flex flex-col gap-2 p-4 mx-4 my-2 border-l-8 ${colorMap[color as keyof typeof colorMap]} shadow-md rounded-2xl bg-white`}
     >
       <div
-        className={`bg-${bgColorIcon || color}-200 w-8 h-8 p-1 rounded-md items-center hidden md:flex`}
+        className={`${bgColorMap[bgColorIcon || (color as keyof typeof bgColorMap)]} w-8 h-8 p-1 rounded-md items-center hidden md:flex`}
       >
         <img src={iconSource} alt={alt} />
       </div>

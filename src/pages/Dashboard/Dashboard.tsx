@@ -1,87 +1,21 @@
 import { useState } from "react";
 import Button from "../../components/ui/Button/Button";
 import StatsCard from "../../components/common/StatsCard";
+import Sidebar from "../../components/common/Sidebar";
+import Navbar from "../../components/common/Navbar";
 
 const Dashboard = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   return (
     <>
       <div className="flex ">
-        <aside
-          className={`fixed top-0 left-0 w-1/2 h-full bg-white shadow transform transtition-transform duration-300 
-            ${isBurgerOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static md:inset-0 md:w-1/4 md:h-0 `}
-        >
-          <div className="mt-4 mx-6">
-            <Button
-              type="button"
-              className="block text-2xl md:hidden"
-              onClick={() => {
-                setIsBurgerOpen(false);
-              }}
-            >
-              X
-            </Button>
-          </div>
-          <div>
-            <h1 className="hidden text-2xl font-bold px-6 md:flex">
-              Tasks Tracker
-            </h1>
-          </div>
-          <div className="flex flex-col justify-between px-6 py-4">
-            <nav className="mt-4 md:mt-10">
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <a href="#Home">Home</a>
-                </li>
-                <li>
-                  <a href="#About">About</a>
-                </li>
-                <li>
-                  <a href="#Contact">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </aside>
+        <Sidebar isOpen={isBurgerOpen} setIsOpen={setIsBurgerOpen} />
+
         <div className="flex flex-1 flex-col">
-          <header className="">
-            <div className="flex justify-between items-center bg-slate-200 p-3">
-              <Button
-                type="button"
-                className="w-8 h-8 md:hidden"
-                onClick={() => setIsBurgerOpen(!isBurgerOpen)}
-              >
-                <img src="/ui/dark/menu-dark.svg" alt="menu-hamburger" />
-              </Button>
-              <div>
-                <h1 className="text-2xl text-black font-bold md:hidden">
-                  Tasks Tracker
-                </h1>
-              </div>
-              {/* <nav className="hidden md:block">
-                <ul className="flex gap-8">
-                  <li>
-                    <a href="#Home">Home</a>
-                  </li>
-                  <li>
-                    <a href="#About">About</a>
-                  </li>
-                  <li>
-                    <a href="#Contact">Contact</a>
-                  </li>
-                </ul>
-              </nav> */}
-              <div className="flex items-center">
-                <div className="w-12 h-12">
-                  <a href="#">
-                    <img src="/ui/user.svg" alt="user" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </header>
-          <main>
-            <div className="bg-slate-100 m-2 py-2 rounded-xl">
+          <Navbar onMenuClick={() => setIsBurgerOpen(!isBurgerOpen)} />
+
+          <main className="flex flex-col">
+            <div className="bg-slate-100 m-2 rounded-xl">
               <div className="mx-4 my-4">
                 <h2 className="text-4xl font-bold">Hello, User.</h2>
                 <h3 className="text-xl text-slate-500">
