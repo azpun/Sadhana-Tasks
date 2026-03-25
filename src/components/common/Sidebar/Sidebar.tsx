@@ -18,8 +18,8 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed z-30 top-0 left-0 w-1/2 h-screen bg-slate-800 text-white shadow transform transition-transform duration-300 
-            ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:sticky md:w-1/4 `}
+        className={`fixed z-30 top-0 left-0 w-1/2 h-screen bg-[#1E293B] text-white shadow transform transition-transform duration-300 
+            ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:sticky md:w-1/5 `}
       >
         <div className="mt-4 mx-6">
           <Button
@@ -38,15 +38,26 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           </h1>
         </div>
         <div className="flex flex-col justify-between px-6 ">
-          <nav className="mt-4 md:mt-10">
-            <ul className="flex flex-col gap-2">
-              <li>
+          <nav className="mt-10 md:mt-10">
+            <ul className="flex flex-col gap-4">
+              <li className="flex items-center gap-3">
+                <img
+                  src="/ui/dashboard.svg"
+                  alt="dashboard"
+                  className="w-6 h-6"
+                />
                 <a href="#Dashboard">Dashboard</a>
               </li>
-              <li>
-                <a href="#Task">Task</a>
+              <li className="flex items-center gap-3">
+                <img src="/ui/tasks.svg" alt="tasks" className="w-6 h-6" />
+                <a href="#Task">Tasks</a>
               </li>
-              <li>
+              <li className="flex items-center gap-3">
+                <img
+                  src="/ui/user-nav.svg"
+                  alt="user-nav"
+                  className="w-6 h-6"
+                />
                 <a href="#Profile">Profile</a>
               </li>
             </ul>

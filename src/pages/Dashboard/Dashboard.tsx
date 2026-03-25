@@ -3,19 +3,21 @@ import Button from "../../components/ui/Button/Button";
 import StatsCard from "../../components/common/StatsCard";
 import Sidebar from "../../components/common/Sidebar";
 import Navbar from "../../components/common/Navbar";
+import StatusTask from "../../components/ui/Status";
+import PriorityTask from "../../components/ui/Priority";
 
 const Dashboard = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   return (
     <>
-      <div className="flex ">
+      <div className="flex bg-[#F8FAFC]">
         <Sidebar isOpen={isBurgerOpen} setIsOpen={setIsBurgerOpen} />
 
         <div className="flex flex-1 flex-col">
           <Navbar onMenuClick={() => setIsBurgerOpen(!isBurgerOpen)} />
 
           <main className="flex flex-col">
-            <div className="bg-slate-100 m-2 rounded-xl">
+            <div className="bg-[#F8FAFC] m-2 rounded-xl">
               <div className="mx-4 my-4">
                 <h2 className="text-4xl font-bold">Hello, User.</h2>
                 <h3 className="text-xl text-slate-500">
@@ -58,10 +60,8 @@ const Dashboard = () => {
                   <h3 className="text-xl">Task 1</h3>
                   <div>
                     <div className="my-4 flex gap-3 items-center">
-                      <span className="p-2 bg-blue-300 rounded-full">
-                        In Progress
-                      </span>
-                      <span>Low</span>
+                      <StatusTask status="in progress" />
+                      <PriorityTask priority="low" />
                     </div>
                   </div>
                 </div>
@@ -69,10 +69,8 @@ const Dashboard = () => {
                   <h3 className="text-xl">Task 2</h3>
                   <div>
                     <div className="my-4 flex gap-3 items-center">
-                      <span className="p-2 bg-orange-300 rounded-full">
-                        To Do
-                      </span>
-                      <span>Medium</span>
+                      <StatusTask status="to do" />
+                      <PriorityTask priority="medium" />
                     </div>
                   </div>
                 </div>
@@ -80,10 +78,8 @@ const Dashboard = () => {
                   <h3 className="text-xl">Task 3</h3>
                   <div>
                     <div className="my-4 flex gap-3 items-center">
-                      <span className="p-2 bg-green-500 text-white rounded-full">
-                        Done
-                      </span>
-                      <span>High</span>
+                      <StatusTask status="done" />
+                      <PriorityTask priority="high" />
                     </div>
                   </div>
                 </div>
