@@ -7,6 +7,7 @@ interface InputProps {
   required?: boolean;
   iconSource?: string;
   hidden?: boolean;
+  className?: string;
 }
 
 const Input = ({
@@ -16,9 +17,12 @@ const Input = ({
   iconSource,
   name,
   hidden = true,
+  className,
 }: InputProps) => {
   return (
-    <div className={` ${hidden ? "hidden" : "block"} relative w-64 md:block`}>
+    <div
+      className={` ${hidden ? "hidden" : "block"} relative w-full md:block ${className}`}
+    >
       <input
         type={type}
         placeholder={placeholder}
