@@ -3,6 +3,7 @@ import Dashboard from "../pages/Dashboard";
 import Tasks from "../pages/Tasks";
 import Profile from "../pages/Profile";
 import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
 
 const Route: RouteObject[] = [
   {
@@ -20,6 +21,10 @@ const Route: RouteObject[] = [
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
   },
 ];
 
