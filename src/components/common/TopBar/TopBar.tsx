@@ -20,11 +20,30 @@ export const TopBar = ({ onMenuClick, onSearchClick }: TopBarProps) => {
         {/* Title Dynamic */}
         <div className="text-xl md:text-2xl text-black font-bold">
           <h1 className="hidden md:block">
-            {location.pathname === "/tasks" ? "Tasks" : "Dashboard"}
+            {location.pathname === "/tasks"
+              ? "Tasks"
+              : location.pathname === "/profile"
+                ? "Profile"
+                : location.pathname === "/"
+                  ? "Dashboard"
+                  : "Tasks Tracker"}
           </h1>
           <h1 className="block md:hidden">
+            Tasks Tracker
+            {/* {location.pathname === "/tasks"
+              ? "Tasks"
+              : location.pathname === "/profile"
+                ? "Profile"
+                : location.pathname === "/"
+                  ? "Dashboard"
+                  : "Tasks Tracker"} */}
+          </h1>
+          {/* <h1 className="block md:hidden">
             {location.pathname === "/tasks" ? "Tasks" : "Tasks Tracker"}
           </h1>
+          <h1 className="block md:hidden">
+            {location.pathname === "/profile" ? "Profile" : "Tasks Tracker"}
+          </h1> */}
         </div>
 
         {/* Search and User */}

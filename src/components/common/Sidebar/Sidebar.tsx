@@ -11,7 +11,7 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   const location = useLocation();
 
   const menuItems = [
-    { href: "/", icon: "/ui/dashboard.svg", label: "Dashboard" },
+    { href: "/dashboard", icon: "/ui/dashboard.svg", label: "Dashboard" },
     { href: "/tasks", icon: "/ui/tasks.svg", label: "Tasks" },
     { href: "/profile", icon: "/ui/user-nav.svg", label: "Profile" },
   ];

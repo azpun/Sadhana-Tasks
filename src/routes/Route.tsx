@@ -4,15 +4,24 @@ import Tasks from "../pages/Tasks";
 import Profile from "../pages/Profile";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
+import LandingPage from "../pages/LandingPage";
 
 const Route: RouteObject[] = [
   {
     path: "/",
-    element: <Dashboard />,
+    element: <LandingPage />,
   },
   {
     path: "/login",
     element: <LoginPage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
   {
     path: "/tasks",
@@ -21,10 +30,6 @@ const Route: RouteObject[] = [
   {
     path: "/profile",
     element: <Profile />,
-  },
-  {
-    path: "/register",
-    element: <RegisterPage />,
   },
 ];
 
