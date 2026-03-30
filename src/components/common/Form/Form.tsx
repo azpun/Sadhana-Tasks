@@ -52,11 +52,13 @@ export const MyForm = () => {
           className="w-full pl-3 pr-3 py-2 border border-slate-400 rounded p-1 "
         />
       </div>
-      <input
-        type="submit"
-        value={location.pathname === "/register" ? "Register" : "Login"}
-        className="bg-blue-500 text-white border-2 border-blue-500 px-4 py-2 rounded-lg mt-2"
-      />
+      <Link to="/dashboard">
+        <input
+          type="submit"
+          value={location.pathname === "/register" ? "Register" : "Login"}
+          className="bg-blue-500 text-white border-2 border-blue-500 px-4 py-2 rounded-lg mt-2"
+        />
+      </Link>
       <span className="flex gap-1">
         <p>
           {location.pathname === "/register" ? (
