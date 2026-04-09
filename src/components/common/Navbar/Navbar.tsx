@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import Button from "../../ui/Button/Button";
+import BurgerButton from "../BurgerButton/BurgerButton";
 
 const Navbar = () => {
   return (
-    <header className="flex justify-between items-center p-4">
+    <header className="flex justify-between items-center px-4 pt-4 bg-slate-300">
       <h1 className="text-2xl font-bold">Tasks Tracker</h1>
 
-      <nav className="flex items-center gap-2">
+      <nav className="hidden md:flex items-center gap-2">
         <Link to="/login">
           <Button className="bg-blue-500 text-white px-4 py-2 rounded-md">
             Login
@@ -18,6 +19,8 @@ const Navbar = () => {
           </Button>
         </Link>
       </nav>
+
+      <BurgerButton />
     </header>
   );
 };
