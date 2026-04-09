@@ -4,7 +4,7 @@ import BurgerButton from "../BurgerButton/BurgerButton";
 
 const Navbar = () => {
   return (
-    <header className="flex justify-between items-center px-4 pt-4 bg-slate-300">
+    <header className="flex justify-between items-center p-4 bg-slate-300 dark:bg-black ">
       <h1 className="text-2xl font-bold">Tasks Tracker</h1>
 
       <nav className="hidden md:flex items-center gap-2">
