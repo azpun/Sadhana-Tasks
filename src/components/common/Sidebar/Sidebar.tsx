@@ -27,7 +27,7 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed z-30 top-0 left-0 w-1/2 h-screen bg-[#1E293B] text-white shadow transform transition-transform duration-300 
+        className={`fixed z-30 top-0 left-0 w-64 h-screen bg-[#1E293B] text-white shadow transform transition-transform duration-300 
             ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:sticky md:w-1/5 `}
       >
         <div className="mt-4 mx-6">
@@ -38,7 +38,19 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
               setIsOpen(false);
             }}
           >
-            X
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </Button>
         </div>
         <div>
