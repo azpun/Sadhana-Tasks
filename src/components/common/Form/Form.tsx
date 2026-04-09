@@ -13,22 +13,13 @@ export const MyForm = () => {
       {location.pathname === "/register" && (
         <div className="flex gap-2 mt-4">
           <div className="">
-            <label htmlFor="">Firstname</label>
+            <label htmlFor="">Fullname</label>
             <input
               type="text"
-              placeholder="John"
-              {...register("firstname", {
-                required: "Firstname wajib diisi",
+              placeholder="John Doe"
+              {...register("fullname", {
+                required: "Fullname wajib diisi",
               })}
-              className="w-full pl-3 pr-3 py-2 border border-slate-400 rounded p-1 "
-            />
-          </div>
-          <div className="">
-            <label htmlFor="">Lastname</label>
-            <input
-              type="text"
-              placeholder="Doe"
-              {...register("lastname", { required: "Lastname wajib diisi" })}
               className="w-full pl-3 pr-3 py-2 border border-slate-400 rounded p-1 "
             />
           </div>
