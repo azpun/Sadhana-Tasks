@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import Button from "../../ui/Button/Button";
 import NavItem from "../NavItem";
+import DarkmodeButton from "../DarkmodeButton";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -30,7 +31,7 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
         className={`fixed z-30 top-0 left-0 w-64 h-screen bg-[#1E293B] text-white shadow transform transition-transform duration-300 
             ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:sticky md:w-1/5 `}
       >
-        <div className="mt-4 mx-6">
+        <div className="mt-4 mx-6 flex justify-between">
           <Button
             type="button"
             className="block text-2xl md:hidden"
@@ -52,6 +53,7 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
               />
             </svg>
           </Button>
+          <DarkmodeButton />
         </div>
         <div>
           <h1 className="hidden text-2xl font-bold px-6 md:flex">

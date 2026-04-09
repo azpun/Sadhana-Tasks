@@ -1,16 +1,9 @@
-import Navbar from "../../components/common/Navbar";
-import MobileMenu from "../../components/common/MobileMenu";
-import { useBurgerStore } from "../../stores/useToggleBurger";
-// import { useDarkStore } from "../../stores/useToggleDark";
+import LandingLayout from "../../components/layouts/LandingLayout";
 
 export const LandingPage = () => {
-  const { isBurgerOpen, setIsBurgerOpen } = useBurgerStore();
-  // const { isDark } = useDarkStore();
-  // console.log(isDark);
   return (
     <>
-      <Navbar />
-      <main className="h-screen gap-4 px-4 bg-slate-300 dark:bg-black">
+      <LandingLayout>
         <div
           className="flex flex-col items-center justify-center bg-white dark:bg-slate-900 border 
         border-slate-300 dark:border-slate-700 rounded-2xl shadow-md h-full "
@@ -22,14 +15,7 @@ export const LandingPage = () => {
             </p>
           </div>
         </div>
-      </main>
-      <MobileMenu />
-      {isBurgerOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40"
-          onClick={() => setIsBurgerOpen()}
-        ></div>
-      )}
+      </LandingLayout>
     </>
   );
 };

@@ -3,7 +3,6 @@ import { useBurgerStore } from "../../../stores/useToggleBurger";
 
 const BurgerButton = () => {
   const { setIsBurgerOpen } = useBurgerStore();
-
   return (
     <>
       <Button className="md:hidden" onClick={() => setIsBurgerOpen()}>

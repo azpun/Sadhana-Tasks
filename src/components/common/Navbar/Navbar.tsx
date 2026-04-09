@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../../ui/Button/Button";
 import BurgerButton from "../BurgerButton/BurgerButton";
+import DarkmodeButton from "../DarkmodeButton";
 
 const Navbar = () => {
   return (
@@ -18,6 +19,7 @@ const Navbar = () => {
             Register
           </Button>
         </Link>
+        <DarkmodeButton className="hidden md:block" />
       </nav>
 
       <BurgerButton />
