@@ -17,7 +17,7 @@ export const StatsCard = ({
 }: StatsCardProps) => {
   return (
     <div
-      className={`flex flex-col gap-2 p-4 mx-4 my-2 border-l-8 ${colorMap[color as keyof typeof colorMap]} shadow-md rounded-2xl bg-white`}
+      className={`flex flex-col gap-2 p-4 mx-4 my-2 border-l-8 ${colorMap[color as keyof typeof colorMap]} shadow-md rounded-2xl bg-white dark:bg-slate-700 `}
     >
       <div
         className={`${bgColorMap[bgColorIcon || (color as keyof typeof bgColorMap)]} w-8 h-8 p-1 rounded-md items-center hidden md:flex`}

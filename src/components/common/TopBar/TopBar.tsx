@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import Button from "../../ui/Button/Button";
 import Input from "../../ui/Input";
+import { useDarkStore } from "../../../stores/useToggleDark";
 
 interface TopBarProps {
   onMenuClick: () => void;
@@ -8,17 +9,22 @@ interface TopBarProps {
 }
 
 export const TopBar = ({ onMenuClick, onSearchClick }: TopBarProps) => {
+  const { isDark } = useDarkStore();
   const location = useLocation();
   return (
     <header className="md:sticky md:top-0 md:z-10">
-      <div className="flex justify-between items-center bg-white p-3 ">
+      <div className="flex justify-between items-center bg-white p-3 dark:bg-slate-900 ">
         {/* Burger Button Mobile */}
         <Button className="w-8 h-8 md:hidden" onClick={onMenuClick}>
-          <img src="/ui/dark/menu-dark.svg" alt="menu-hamburger" />
+          {isDark ? (
+            <img src="/ui/light/menu-light.svg" alt="menu-hamburger" />
+          ) : (
+            <img src="/ui/dark/menu-dark.svg" alt="menu-hamburger" />
+          )}
         </Button>
 
         {/* Title Dynamic */}
-        <div className="text-xl md:text-2xl text-black font-bold">
+        <div className="text-xl md:text-2xl text-black dark:text-slate-100 font-bold">
           <h1 className="hidden md:block">
             {location.pathname === "/tasks"
               ? "Tasks"

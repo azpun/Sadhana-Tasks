@@ -6,7 +6,9 @@ interface StatusProps {
 
 export const StatusTask = ({ status }: StatusProps) => {
   return (
-    <span className={`p-2 rounded-full ${bgStatusColor[status]} capitalize`}>
+    <span
+      className={`p-2 rounded-full ${bgStatusColor[status]} capitalize dark:text-slate-900`}
+    >
       {status}
     </span>
   );

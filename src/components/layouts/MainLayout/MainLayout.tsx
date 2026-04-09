@@ -7,11 +7,11 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
-    <div className="flex bg-[#F8FAFC]">
+    <div className="flex bg-[#F8FAFC] dark:bg-slate-900">
       {/* Sidebar */}
       <Sidebar isOpen={isBurgerOpen} setIsOpen={setIsBurgerOpen} />
 
-      <div className="flex flex-1 flex-col">
+      <div className="flex flex-1 flex-col text-slate-900 dark:text-slate-100">
         {/* Top Bar */}
         <TopBar
           onMenuClick={() => setIsBurgerOpen(!isBurgerOpen)}
@@ -19,7 +19,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
         />
         <SearchMobile isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />
 
-        <main className="flex flex-col">
+        <main className="flex flex-col text-slate-900 dark:text-slate-100">
           {/* Main Content */}
           {children}
         </main>

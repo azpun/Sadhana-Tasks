@@ -19,7 +19,7 @@ const Dashboard = () => {
   return (
     <MainLayout>
       {/* Stats Card */}
-      <div className="bg-[#F8FAFC] m-2 rounded-xl">
+      <div className="bg-[#F8FAFC] m-2 pb-2 rounded-xl dark:bg-slate-800">
         <div className="mx-4 my-4">
           <h2 className="text-4xl font-bold">Hello, User.</h2>
           <h3 className="text-xl text-slate-500">You have n tasks today</h3>

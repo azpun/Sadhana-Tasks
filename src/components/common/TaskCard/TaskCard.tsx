@@ -21,13 +21,17 @@ export const TaskCard = ({
 }: TaskCardProps) => {
   return (
     <div
-      className={`p-4 mx-4 my-2 bg-white border border-slate-200 rounded-2xl shadow-md border-l-4 ${borderStatusColor[status]}`}
+      className={`p-4 mx-4 my-2 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-md border-l-4 ${borderStatusColor[status]} `}
     >
       {/* Title */}
-      <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+      <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+        {title}
+      </h3>
 
       {/* Description */}
-      <p className="text-sm text-slate-500 mt-1 truncate">{description}</p>
+      <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 truncate">
+        {description}
+      </p>
 
       {/* Priority + Status + Due Date */}
       <div className="mt-3 flex items-center justify-between">
@@ -37,7 +41,7 @@ export const TaskCard = ({
             <span
               className={`w-2.5 h-2.5 rounded-full ${dotPriorityColor[priority]}`}
             />
-            <span className="text-xs text-slate-600 capitalize">
+            <span className="text-xs text-slate-600 dark:text-slate-400 capitalize">
               {priority}
             </span>
           </div>
@@ -48,7 +52,7 @@ export const TaskCard = ({
 
         {/* Due Date */}
         {dueDate && (
-          <span className="text-xs text-slate-400">Due: {dueDate}</span>
+          <span className="text-xs text-slate-400 ">Due: {dueDate}</span>
         )}
       </div>
     </div>

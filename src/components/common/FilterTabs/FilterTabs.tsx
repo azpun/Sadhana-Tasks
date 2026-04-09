@@ -6,7 +6,7 @@ export const FilterTabs = () => {
   const [activeTab, setActiveTab] = useState("All");
 
   return (
-    <div className="bg-white border-b border-slate-200 overflow-x-auto">
+    <div className="bg-white dark:bg-slate-700 border-b border-slate-200 dark:border-slate-800 overflow-x-auto">
       <div className="flex min-w-max">
         {tabs.map((tab) => (
           <button
@@ -17,7 +17,7 @@ export const FilterTabs = () => {
               ${
                 activeTab === tab
                   ? "text-blue-500"
-                  : "text-slate-500 hover:text-slate-700"
+                  : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
               }`}
           >
             {tab}
