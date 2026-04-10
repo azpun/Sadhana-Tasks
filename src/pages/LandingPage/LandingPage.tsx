@@ -35,14 +35,14 @@ export const LandingPage = () => {
           <div className="relative isolate px-6 pt-14 lg:px-8">
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
               <div className="text-center">
-                <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 dark:text-white sm:text-7xl">
+                <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-balance text-gray-900 dark:text-white">
                   Make your life easier with Task Tracker
                 </h1>
-                <p className="mt-8 text-lg font-medium text-pretty text-gray-600 dark:text-gray-400 sm:text-xl/8">
+                <p className="mt-8 text-md md:text-lg font-medium text-pretty text-gray-600 dark:text-gray-400">
                   Task Tracker is a simple and intuitive task management tool
                   that helps you stay organized and productive.
                 </p>
-                <div className="mt-10 flex items-center justify-center gap-x-6">
+                <div className="mt-10 flex flex-col gap-4 md:flex-row items-center justify-center gap-x-6">
                   <Link
                     to="/login"
                     className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-400 
@@ -61,7 +61,7 @@ export const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="py-24 sm:py-32">
+        <div className="py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center justify-center">
             <div className="mx-auto max-w-2xl lg:mx-0 text-center">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
@@ -91,12 +91,12 @@ export const LandingPage = () => {
             </dl>
           </div>
         </div>
-        <div className="py-12 sm:py-16 h-fit bg-white dark:bg-gray-900 rounded-2xl my-10 md:flex md:justify-between ">
-          <div className="mx-auto max-w-md text-center lg:mx-15 lg:flex-auto lg:py-32 lg:text-left">
-            <h2 className="text-3xl font-semibold tracking-tight text-balance text-black dark:text-white sm:text-4xl">
+        <div className="relative py-20 sm:py-28 h-fit bg-white dark:bg-gray-900 rounded-2xl my-10 md:flex md:justify-between ">
+          <div className="z-50 mx-auto max-w-md text-center lg:mx-15 lg:flex-auto lg:py-32 lg:text-left">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-balance text-black dark:text-white sm:text-4xl">
               Boost your productivity. Start using our app today.
             </h2>
-            <p className="mt-6 text-lg/8 text-pretty text-gray-700 dark:text-gray-400">
+            <p className="mt-6 text-md md:text-lg text-pretty text-gray-700 dark:text-gray-400">
               Task Tracker is a simple and intuitive task management tool that
               helps you stay organized and productive.
             </p>
@@ -117,15 +117,6 @@ export const LandingPage = () => {
                 <span aria-hidden="true">→</span>
               </a>
             </div>
-          </div>
-          <div className="relative h-80">
-            <img
-              alt="App screenshot"
-              src="/assets/hero1.svg"
-              width={1824}
-              height={1080}
-              className=" w-228 max-w-none rounded-md "
-            />
           </div>
         </div>
       </LandingLayout>

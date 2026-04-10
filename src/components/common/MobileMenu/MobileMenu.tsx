@@ -18,7 +18,7 @@ const MobileMenu = () => {
 
       {/* Mobile Menu */}
       <aside
-        className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 
+        className={`fixed inset-y-0 right-0 h-full w-64 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 
               z-50 p-4 transform transition-transform duration-300 ease-in-out ${isBurgerOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex flex-col gap-4">

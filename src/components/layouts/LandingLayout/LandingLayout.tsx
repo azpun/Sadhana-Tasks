@@ -15,7 +15,7 @@ export const LandingLayout = ({ children }: { children: React.ReactNode }) => {
             <p>© 2026 Task Tracker. All rights reserved.</p>
           </div>
           <div>
-            <p>Made by Punz</p>
+            <p>Made by Pun</p>
           </div>
         </div>
       </footer>
