@@ -73,7 +73,24 @@ export const TopBar = ({ onMenuClick, onSearchClick }: TopBarProps) => {
               {/* Filter Button Mobile (mockup has a downward caret or filter icon, using text or simple svg for now) */}
               <div className="block md:hidden">
                 <Button className="w-8 h-8 flex items-center justify-center">
-                  <span className="text-xl text-slate-600">🔽</span>
+                  <span className="text-xl text-slate-600">
+                    {/* <img src="/ui/filter.svg" alt="filter" /> */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="48"
+                      height="48"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 4H3l7 8.35v6.65a1 1 0 001 1h2a1 1 0 001-1v-6.65z"
+                      />
+                    </svg>
+                  </span>
                 </Button>
               </div>
             </>
