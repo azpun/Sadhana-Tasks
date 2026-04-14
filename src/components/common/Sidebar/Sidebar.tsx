@@ -29,7 +29,7 @@ export const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       {/* Sidebar */}
       <aside
         className={`fixed z-30 top-0 left-0 w-64 bg-[#1E293B] text-white shadow transform transition-transform duration-300 
-            ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:sticky md:w-1/5 `}
+            ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:sticky md:w-1/5 h-screen`}
       >
         <div className="mt-4 mx-6 flex justify-between">
           <Button
