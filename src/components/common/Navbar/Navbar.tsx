@@ -6,7 +6,7 @@ import DarkmodeButton from "../DarkmodeButton";
 const Navbar = () => {
   return (
     <header className="flex justify-between items-center p-4 bg-slate-300 dark:bg-black ">
-      <h1 className="text-2xl font-bold">Tasks Tracker</h1>
+      <h1 className="text-2xl font-bold">Sadhana Tasks</h1>
 
       <nav className="hidden md:flex items-center gap-2">
         <Link to="/login">

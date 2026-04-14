@@ -7,7 +7,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
-    <div className="flex bg-[#F8FAFC] dark:bg-slate-900">
+    <div className="flex bg-[#F8FAFC] dark:bg-slate-900 h-full">
       {/* Sidebar */}
       <Sidebar isOpen={isBurgerOpen} setIsOpen={setIsBurgerOpen} />
 

@@ -25,7 +25,7 @@ const Dashboard = () => {
           <h3 className="text-xl text-slate-500">You have n tasks today</h3>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4">
-          {StatsCardData.map((item) => (
+          {StatsCardData.map(item => (
             <StatsCard
               title={item.title}
               iconSource={item.iconSource}

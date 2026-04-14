@@ -78,8 +78,8 @@ export const TopBar = ({ onMenuClick, onSearchClick }: TopBarProps) => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
-                      width="48"
-                      height="48"
+                      width="36"
+                      height="36"
                     >
                       <path
                         fill="none"

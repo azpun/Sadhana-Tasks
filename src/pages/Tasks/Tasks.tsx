@@ -6,7 +6,7 @@ import FAB from "../../components/common/FAB";
 export const Tasks = () => {
   return (
     <MainLayout>
-      <div className="flex flex-col flex-1 h-full min-h-[calc(100vh-140px)] relative">
+      <div className="flex flex-col flex-1 ">
         {/* Horizontal Scrollable Filter Tabs based on mockup */}
         <FilterTabs />
 
